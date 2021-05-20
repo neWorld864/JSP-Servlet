@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>01_Servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- welcome-file : 처음에 실행할 화면 설정해줌 -->
+  
+  
+  <!-- servlet매핑 --><!-- 매핑: 해당 값이 다른 값을 가리키도록 하는 것 -->
+ 	<servlet>
+ 		<servlet-name>Servlet1</servlet-name><!-- 배포명 -->
+ 		<servlet-class>com.kh.servlet.TestServlet1</servlet-class> <!-- 실제 Servlet 클래스 -->
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>Servlet1</servlet-name> <!-- 배포 명 -->
+ 		<url-pattern>/testServlet1.do</url-pattern> <!-- 클라이언트 요청 값(주소) --> 
+ 	</servlet-mapping>
+  <!-- 요청경로가 들어옴 -> 요청에 대해 처리할 수 있는 서블릿이 필요 -> 위에 있는 com.kh.~ 가 요청을 받아줌 (받아줄 수 있는 이유: servlet-name이 같기 때문!)-->
+  
+  
+  <!-- servlet매핑 2 -->
+ 	<servlet>
+ 		<servlet-name>Servlet2</servlet-name>
+ 		<servlet-class>com.kh.servlet.TestServlet2</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>Servlet2</servlet-name> 
+ 		<url-pattern>/testServlet2.do</url-pattern> 
+ 	</servlet-mapping>
+ 	
+ 	
+  <!-- servlet매핑 3 -->
+ 	<servlet>
+ 		<servlet-name>Servlet3</servlet-name>
+ 		<servlet-class>com.kh.servlet.TestServlet3</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>Servlet3</servlet-name> 
+ 		<url-pattern>/testServlet3.do</url-pattern> 
+ 	</servlet-mapping>
+ 	
+  <!-- servlet매핑 4 -->
+ 	<servlet>
+ 		<servlet-name>Servlet4</servlet-name>
+ 		<servlet-class>com.kh.servlet.TestServlet4</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>Servlet4</servlet-name>
+ 		<url-pattern>/testServlet4.do</url-pattern>
+ 	</servlet-mapping>
+ 	
+</web-app>
